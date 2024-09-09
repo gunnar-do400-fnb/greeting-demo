@@ -1,3 +1,5 @@
 #!/bin/bash
 
-cat greeting.txt
+GREET=greeting.txt
+
+cat $GREET
