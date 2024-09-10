@@ -5,7 +5,7 @@ GREET=greeting.txt
 LG=${LANG/.*}
 
 LOCALIZED=${GREET}.${LG}
-DEFAULT=${GREET}.en_US
+DEFAULT=${GREET}.default
 
 if [ -f ${LOCALIZED} ]; then
   cat ${LOCALIZED}
