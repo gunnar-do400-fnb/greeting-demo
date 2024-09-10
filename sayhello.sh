@@ -2,4 +2,13 @@
 
 GREET=greeting.txt
 
-cat $GREET
+LG=${LANG/.*}
+
+LOCALIZED=${GREET}.${LG}
+DEFAULT=${GREET}.en_US
+
+if [ -f ${LOCALIZED} ]; then
+  cat ${LOCALIZED}
+else
+  cat ${DEFAULT}
+fi
